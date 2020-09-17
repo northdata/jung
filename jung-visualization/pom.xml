@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>net.sf.jung</groupId>
+    <groupId>com.northdata.jung</groupId>
     <artifactId>jung-parent</artifactId>
     <version>2.2-SNAPSHOT</version>
   </parent>
@@ -12,17 +12,17 @@
 
   <dependencies>
     <dependency>
-      <groupId>net.sf.jung</groupId>
+      <groupId>com.northdata.jung</groupId>
       <artifactId>jung-api</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>net.sf.jung</groupId>
+      <groupId>com.northdata.jung</groupId>
       <artifactId>jung-algorithms</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>net.sf.jung</groupId>
+      <groupId>com.northdata.jung</groupId>
       <artifactId>jung-graph-impl</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
