@@ -204,18 +204,18 @@
       </plugin>
     </plugins>
   </reporting>
-  <distributionManagement>
-    <snapshotRepository>
-      <id>sonatype-nexus-snapshots</id>
-      <name>Sonatype Nexus Snapshots</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-    </snapshotRepository>
-    <repository>
-      <id>sonatype-nexus-staging</id>
-      <name>Nexus Release Repository</name>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-  </distributionManagement>
+	<distributionManagement>
+		<repository>
+			<id>github-private</id>
+			<name>North Data GitHub Packages (Private)</name>
+			<url>https://maven.pkg.github.com/northdata/pkg-private</url>
+		</repository>
+		<snapshotRepository>
+			<id>github-private</id>
+			<name>North Data GitHub Packages (Private)</name>
+			<url>https://maven.pkg.github.com/northdata/pkg-private</url>
+		</snapshotRepository>
+	</distributionManagement>
   <profiles>
     <profile>
       <id>sonatype-oss-release</id>
