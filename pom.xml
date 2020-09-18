@@ -11,14 +11,14 @@
   <licenses>
     <license>
       <name>The BSD License</name>
-      <url>https://github.com/jrtom/jung/blob/master/LICENSE</url>
+      <url>https://github.com/northdata/jung/blob/master/LICENSE</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
   <scm>
-    <url>https://github.com/jrtom/jung</url>
-    <connection>scm:git:git://github.com/jrtom/jung.git</connection>
-    <developerConnection>scm:git:git://github.com/jrtom/jung.git</developerConnection>
+    <url>https://github.com/northdata/jung</url>
+    <connection>scm:git:git://github.com/northdata/jung.git</connection>
+    <developerConnection>scm:git:git://github.com/northdata/jung.git</developerConnection>
   </scm>
   <description>
     JUNG the Java Universal Network/Graph Framework--is a software
@@ -155,14 +155,26 @@
             </archive>
           </configuration>
         </plugin>
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.6.7</version>
+				<extensions>true</extensions>
+				<configuration>
+					<serverId>ossrh</serverId>
+					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+					<autoReleaseAfterClose>false</autoReleaseAfterClose>
+				</configuration>
+			</plugin>
         <plugin>
           <artifactId>maven-release-plugin</artifactId>
           <version>{release.plugin.version}</version>
-          <configuration>
-            <mavenExecutorId>forked-path</mavenExecutorId>
-            <useReleaseProfile>false</useReleaseProfile>
-            <arguments>${arguments} -Psonatype-oss-release</arguments>
-          </configuration>
+			<configuration>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<useReleaseProfile>false</useReleaseProfile>
+					<releaseProfiles>release</releaseProfiles>
+					<goals>deploy</goals>
+				</configuration>
         </plugin>
       </plugins>
     </pluginManagement>
